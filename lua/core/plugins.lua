@@ -74,6 +74,8 @@ return require('packer').startup(function(use)
   }
   --colors
   use 'NvChad/nvim-colorizer.lua'
+  --cursorline
+  use 'yamatsum/nvim-cursorline'
 
   if packer_bootstrap then
     require('packer').sync()
