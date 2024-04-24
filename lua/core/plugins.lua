@@ -72,6 +72,8 @@ return require('packer').startup(function(use)
       require('Comment').setup()
     end
   }
+  --colors
+  use 'NvChad/nvim-colorizer.lua'
 
   if packer_bootstrap then
     require('packer').sync()
