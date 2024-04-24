@@ -42,7 +42,17 @@ keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
 
 --telescope
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader><leader>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+keymap.set('n', '<leader><leader>', builtin.find_files, {})
+keymap.set('n', '<leader>fg', builtin.live_grep, {})
+keymap.set('n', '<leader>fb', builtin.buffers, {})
+keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+on_attach = function(_, _)
+  keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
+  keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+
+  keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+  keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
+  keymap.set('n', 'gr', builtin.lsp_references, {})
+  keymap.set('n', 'K', vim.lsp.buf.hover, {})
+end
