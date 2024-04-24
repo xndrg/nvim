@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
 
   -- colorschemes (configure at plugin_config/colorscheme.lua)
   use 'catppuccin/nvim'
-  use 'dasupradyumna/midnight.nvim' 
+  use 'dasupradyumna/midnight.nvim'
 
   use 'nvim-tree/nvim-tree.lua'
 
@@ -37,12 +37,44 @@ return require('packer').startup(function(use)
 
   -- lsp
   use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
+  }
+  -- autocompletion and snippets
+  use {
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp'
+  }
+  use({
+	  "L3MON4D3/LuaSnip",
+	  tag = "v2.*",
+	  run = "make install_jsregexp"
+  })
+  use 'saadparwaiz1/cmp_luasnip'
+
+  -- autopairs
+  use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
+  }
+
+  --better ui
+  use 'stevearc/dressing.nvim'
+  use 'ntpeters/vim-better-whitespace'
+  --comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
   }
 
   if packer_bootstrap then
     require('packer').sync()
   end
 end)
+
