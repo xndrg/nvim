@@ -18,6 +18,8 @@ return require('packer').startup(function(use)
   -- colorschemes (configure at plugin_config/colorscheme.lua)
   use 'catppuccin/nvim'
   use 'dasupradyumna/midnight.nvim'
+  use 'Mofiqul/vscode.nvim'
+  use 'morhetz/gruvbox'
 
   use 'nvim-tree/nvim-tree.lua'
 
@@ -75,6 +77,7 @@ return require('packer').startup(function(use)
   use 'NvChad/nvim-colorizer.lua'
   --cursorline
   use 'yamatsum/nvim-cursorline'
+  use 'windwp/nvim-ts-autotag'
 
   if packer_bootstrap then
     require('packer').sync()

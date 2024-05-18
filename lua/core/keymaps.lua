@@ -56,3 +56,4 @@ on_attach = function(_, _)
   keymap.set('n', 'gr', builtin.lsp_references, {})
   keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
+
