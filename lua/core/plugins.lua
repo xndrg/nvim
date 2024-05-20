@@ -20,6 +20,9 @@ return require('packer').startup(function(use)
   use 'dasupradyumna/midnight.nvim'
   use 'Mofiqul/vscode.nvim'
   use 'morhetz/gruvbox'
+  use 'AlexvZyl/nordic.nvim'
+  use 'scottmckendry/cyberdream.nvim'
+  use 'patstockwell/vim-monokai-tasty'
 
   use 'nvim-tree/nvim-tree.lua'
 
@@ -78,6 +81,8 @@ return require('packer').startup(function(use)
   --cursorline
   use 'yamatsum/nvim-cursorline'
   use 'windwp/nvim-ts-autotag'
+  --test
+  use "xiyaowong/transparent.nvim"
 
   if packer_bootstrap then
     require('packer').sync()

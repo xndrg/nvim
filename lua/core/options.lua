@@ -20,6 +20,7 @@ opt.cursorline = false -- do not highlight the current cursor line
 -- appearance
 opt.termguicolors = false
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+opt.hlsearch = false
 -- opt.colorcolumn = "100" -- show sign column so that text doesn't shift
 
 -- clipboard
