@@ -37,7 +37,7 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 -- plugins
 
 --nvim-tree
-keymap.set("n", "<leader>nt", ":NvimTreeFindFileToggle<CR>")
+keymap.set("n", "<leader>tt", ":NvimTreeFindFileToggle<CR>")
 keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>")
 
 --telescope
@@ -57,5 +57,7 @@ on_attach = function(_, _)
   keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
 
---exec go project
+--run go project
 keymap.set('n', '<leader>g', ':update<bar>!go run .<CR>')
+--fmt go project
+keymap.set('n', '<leader>ft', ':update<bar>!go fmt %<CR>')

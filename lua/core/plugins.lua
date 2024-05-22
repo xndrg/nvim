@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
   use 'AlexvZyl/nordic.nvim'
   use 'scottmckendry/cyberdream.nvim'
   use 'patstockwell/vim-monokai-tasty'
+  use 'devsjc/vim-jb'
 
   use 'nvim-tree/nvim-tree.lua'
 
