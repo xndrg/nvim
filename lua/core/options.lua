@@ -20,8 +20,8 @@ opt.cursorline = false -- do not highlight the current cursor line
 -- appearance
 opt.termguicolors = false
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.hlsearch = false
-opt.colorcolumn = "80" -- show sign column so that text doesn't shift
+opt.hlsearch = true
+opt.colorcolumn = "100" -- show sign column so that text doesn't shift
 
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
@@ -38,3 +38,4 @@ opt.backup = false -- disable backup files
 
 vim.cmd("set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<")
 vim.cmd("set list")
+opt.fillchars = {eob = " "}

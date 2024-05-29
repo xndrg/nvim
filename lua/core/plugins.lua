@@ -89,6 +89,7 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/vim-be-good'
 
   use 'j-hui/fidget.nvim'
+  use 'ray-x/lsp_signature.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
