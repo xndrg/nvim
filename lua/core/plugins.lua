@@ -90,6 +90,10 @@ return require('packer').startup(function(use)
 
   use 'j-hui/fidget.nvim'
   use 'ray-x/lsp_signature.nvim'
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua'
+
+  use 'dgagn/diagflow.nvim'
 
   if packer_bootstrap then
     require('packer').sync()

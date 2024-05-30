@@ -39,3 +39,8 @@ opt.backup = false -- disable backup files
 vim.cmd("set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<")
 vim.cmd("set list")
 opt.fillchars = {eob = " "}
+
+vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })

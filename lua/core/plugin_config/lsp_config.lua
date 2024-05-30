@@ -44,3 +44,4 @@ require("lspconfig").html.setup {
 }
 
 require('nvim-ts-autotag').setup()
+

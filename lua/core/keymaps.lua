@@ -57,7 +57,5 @@ on_attach = function(_, _)
   keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
 
---run go project
-keymap.set('n', '<leader>g', ':update<bar>!go run .<CR>')
---fmt go project
-keymap.set('n', '<leader>ft', ':update<bar>!go fmt %<CR>')
+-- Go
+keymap.set('n', '<leader>rg', ':update<bar>!go run .<CR>')
