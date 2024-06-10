@@ -3,12 +3,15 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {
-    "lua_ls",
-    "clangd",
+	"lua_ls",
+	"clangd",
 	"gopls",
 	"pyright",
 	"sqls",
-	"html"
+	"html",
+	"vuels",
+	"tsserver",
+	"cssls"
   }
 })
 
@@ -39,6 +42,36 @@ require('lspconfig').sqls.setup{
 }
 
 require("lspconfig").html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+require("lspconfig").volar.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require("lspconfig").tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+	init_options = {
+    plugins = {
+      {
+        name = '@vue/typescript-plugin',
+        location = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server',
+        languages = { 'vue' },
+      },
+    },
+  },
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+}
+
+require("lspconfig").cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+require('lspconfig').svelte.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }

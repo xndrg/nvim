@@ -7,5 +7,5 @@ require("core.plugin_config.completions")
 require("core.plugin_config.cursorline")
 require("core.plugin_config.telescope")
 require("core.plugin_config.go")
-require("core.plugin_config.diagflow")
+require("core.plugin_config.luasnip")
 

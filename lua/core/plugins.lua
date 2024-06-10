@@ -93,7 +93,9 @@ return require('packer').startup(function(use)
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'
 
-  use 'dgagn/diagflow.nvim'
+  use 'folke/lsp-colors.nvim'
+
+  use 'ramojus/mellifluous.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
