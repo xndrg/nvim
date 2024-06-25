@@ -96,6 +96,7 @@ return require('packer').startup(function(use)
   use 'folke/lsp-colors.nvim'
 
   use 'ramojus/mellifluous.nvim'
+  use "blazkowolf/gruber-darker.nvim"
 
   if packer_bootstrap then
     require('packer').sync()

@@ -40,7 +40,18 @@ ls.add_snippets(nil, {
 								"<style scoped>",
 								"",
 								"</style>"
-						})
+		})
+        }),
+        snip({
+            trig = "iferr",
+            namr = "Iferr",
+            dscr = "if err != nil =)",
+        }, {
+		text({
+			"if err != nil {",
+			"\treturn err",
+			"}",
+		})
         }),
     },
 })

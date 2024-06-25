@@ -15,6 +15,8 @@ require("mason-lspconfig").setup({
   }
 })
 
+require "lsp_signature".setup()
+
 require("lspconfig").lua_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -58,7 +60,7 @@ require("lspconfig").tsserver.setup {
     plugins = {
       {
         name = '@vue/typescript-plugin',
-        location = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server',
+	location = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server',
         languages = { 'vue' },
       },
     },
