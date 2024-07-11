@@ -4,7 +4,6 @@ require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {
 	"lua_ls",
-	"clangd",
 	"gopls",
 	"pyright",
 	"sqls",
@@ -27,7 +26,16 @@ require("lspconfig").gopls.setup {
   capabilities = capabilities
 }
 
-require("lspconfig").clangd.setup {
+require("lspconfig").ccls.setup {
+  init_options = {
+    compilationDatabaseDirectory = "build";
+    index = {
+      threads = 0;
+    };
+    clang = {
+      excludeArgs = { "-frounding-math"} ;
+    };
+  },
   on_attach = on_attach,
   capabilities = capabilities
 }

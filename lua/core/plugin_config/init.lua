@@ -8,4 +8,5 @@ require("core.plugin_config.cursorline")
 require("core.plugin_config.telescope")
 require("core.plugin_config.go")
 require("core.plugin_config.luasnip")
+require("core.plugin_config.oil")
 

@@ -24,6 +24,11 @@ return require('packer').startup(function(use)
   use 'scottmckendry/cyberdream.nvim'
   use 'patstockwell/vim-monokai-tasty'
   use 'devsjc/vim-jb'
+  use 'ramojus/mellifluous.nvim'
+  use "blazkowolf/gruber-darker.nvim"
+  use 'jacoborus/tender.vim'
+  use 'nyoom-engineering/oxocarbon.nvim'
+  use 'olivercederborg/poimandres.nvim'
 
   use 'nvim-tree/nvim-tree.lua'
 
@@ -60,13 +65,13 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
 
   -- autopairs
-  use {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = function()
-      require("nvim-autopairs").setup {}
-    end
-  }
+  -- use {
+  --   "windwp/nvim-autopairs",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("nvim-autopairs").setup {}
+  --   end
+  -- }
 
   --better ui
   use 'stevearc/dressing.nvim'
@@ -94,9 +99,8 @@ return require('packer').startup(function(use)
   use 'ray-x/guihua.lua'
 
   use 'folke/lsp-colors.nvim'
-
-  use 'ramojus/mellifluous.nvim'
-  use "blazkowolf/gruber-darker.nvim"
+  use 'stevearc/oil.nvim'
+  use 'ej-shafran/compile-mode.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
