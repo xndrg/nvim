@@ -29,6 +29,10 @@ return require('packer').startup(function(use)
   use 'jacoborus/tender.vim'
   use 'nyoom-engineering/oxocarbon.nvim'
   use 'olivercederborg/poimandres.nvim'
+  use 'andreasvc/vim-256noir'
+  use 'rose-pine/neovim'
+  use 'widatama/vim-phoenix'
+  use 'p00f/alabaster.nvim'
 
   use 'nvim-tree/nvim-tree.lua'
 

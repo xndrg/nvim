@@ -65,6 +65,6 @@ keymap.set('n', '<leader>mr', ':update<bar>!make run .<CR>')
 vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
 
-vim.keymap.set("n", "\\", "<cmd>Compile ./build.sh && ./main<CR>")
+vim.keymap.set("n", "\\", "<cmd>Compile ./build.sh<CR>")
 vim.keymap.set("n", "<leader>e", "<cmd>Oil<CR>")
 vim.keymap.set("n", "<leader>E", "<cmd>Oil --float<CR>")

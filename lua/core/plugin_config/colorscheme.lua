@@ -1,1 +1,2 @@
-vim.cmd.colorscheme "gruber-darker"
+vim.opt.termguicolors = true
+vim.cmd.colorscheme "mellifluous"

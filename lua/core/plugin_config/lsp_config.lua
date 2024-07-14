@@ -4,6 +4,7 @@ require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {
 	"lua_ls",
+	"clangd",
 	"gopls",
 	"pyright",
 	"sqls",
@@ -22,20 +23,6 @@ require("lspconfig").lua_ls.setup {
 }
 
 require("lspconfig").gopls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-require("lspconfig").ccls.setup {
-  init_options = {
-    compilationDatabaseDirectory = "build";
-    index = {
-      threads = 0;
-    };
-    clang = {
-      excludeArgs = { "-frounding-math"} ;
-    };
-  },
   on_attach = on_attach,
   capabilities = capabilities
 }
@@ -86,5 +73,9 @@ require('lspconfig').svelte.setup {
   capabilities = capabilities
 }
 
-require('nvim-ts-autotag').setup()
+require('lspconfig').clangd.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 
+require('nvim-ts-autotag').setup()
