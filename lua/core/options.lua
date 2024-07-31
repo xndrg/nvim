@@ -7,7 +7,7 @@ opt.number = true
 -- tabs & indentation
 opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
 opt.shiftwidth = 4 -- 4 spaces for indent width
-opt.expandtab = false -- expand tab to spaces
+opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 -- line wrapping
@@ -16,6 +16,7 @@ opt.linebreak = true
 
 -- cursor line
 opt.cursorline = false -- do not highlight the current cursor line
+vim.opt["guicursor"] = "" -- block cursor in insert mode
 
 -- appearance
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
@@ -43,4 +44,3 @@ vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSi
 vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
 vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
 vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
-
